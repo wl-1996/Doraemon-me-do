@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    background: #93B8CA;
+}
+
+.face-big {
+    width: 420px;
+    height: 400px;
+    border: 1px solid red;
+    border-radius: 47% 47% 45% 45%;
+    background: #1e90ff;
+    position: relative;
+    margin: 10vh auto;
+}
+
+.face-big .face-small {
+    width: 360px;
+    height: 300px;
+    border: 1px solid blue;
+    border-radius: 50% 50% 45% 45%;
+    background: #fff;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+}
+
+.face-small .eye {
+    width: 180px;
+    height: auto;
+    /*border: 1px solid blue;*/
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: calc(50% - 90px);
+    top: -50px;
+}
+
+.face-small .eye .eye-big-left, .face-small .eye .eye-big-right {
+    width: 90px;
+    height: 110px;
+    border: 1px solid red;
+    border-radius: 46%;
+    background: #FFF;
+}
+
+.face-small .eye-small-left, .face-small .eye-small-right {
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    top: 60%;
+}
+
+.face-small .eye-small-left:hover, .face-small .eye-small-right:hover {
+    animation: eye 0.5s infinite linear;
+}
+
+@keyframes eye {
+0%{
+    transform: translate(0px);
+}
+    33%{
+        transform: translateX(-10px);
+    }
+    67%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+
+.face-small .eye-small-left {
+    left: 30%;
+}
+
+.face-small .eye-small-right {
+    right: 30%;
+}
+
+.face-small .nose-round {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f00;
+    position: absolute;
+    top: 45px;
+    left: calc(50% - 25px);
+}
+
+.face-small .nose-round::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: -10px -10px 2px 2px rgba(255, 255, 255, .4);
+    background: #fff;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+
+.face-small .nose-line {
+    width: 20px;
+    height: 130px;
+    border-left: 2px solid black;
+    position: absolute;
+    left: 50%;
+    top: 94px;
+}
+
+.face-small .beard-left span:nth-child(1), .face-small .beard-right span:nth-child(1) {
+    width: 100px;
+    height: 60px;
+    border-top: 2px solid #000;
+    position: absolute;
+}
+
+.face-small .beard-left span:nth-child(1) {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    transform: rotate(25deg);
+}
+
+.face-small .beard-right span:nth-child(1) {
+    position: absolute;
+    right: 50px;
+    top: 100px;
+    transform: rotate(-25deg);
+}
+
+.face-small .beard-left span:nth-child(2), .face-small .beard-right span:nth-child(2) {
+    width: 100px;
+    height: 60px;
+    border-top: 2px solid #000;
+    position: absolute;
+}
+
+.face-small .beard-left span:nth-child(2) {
+    position: absolute;
+    left: 58px;
+    top: 140px;
+    /*transform: rotate(25deg);*/
+}
+
+.face-small .beard-right span:nth-child(2) {
+    position: absolute;
+    right: 58px;
+    top: 140px;
+    /*transform: rotate(-25deg);*/
+}
+
+.face-small .beard-left span:nth-child(3), .face-small .beard-right span:nth-child(3) {
+    width: 100px;
+    height: 60px;
+    border-top: 2px solid #000;
+    position: absolute;
+}
+
+.face-small .beard-left span:nth-child(3) {
+    position: absolute;
+    left: 74px;
+    top: 175px;
+    transform: rotate(-25deg);
+}
+
+.face-small .beard-right span:nth-child(3) {
+    position: absolute;
+    right: 76px;
+    top: 175px;
+    transform: rotate(25deg);
+}
+
+.mouth {
+    position: absolute;
+    width: 240px;
+    height: 200px;
+    border-bottom: 2px solid #000;
+    border-radius: 0 0 45% 45%;
+    left: calc(50% - 120px);
+    bottom: 72px;
+}
+
+.neck {
+    width: 320px;
+    height: 50px;
+    border: 2px solid #000;
+    background: #ff0000;
+    border-radius: 30px;
+    position: relative;
+    top: -100px;
+    margin: 0 auto;
+}
+
+.neck .fastener {
+    width: 60px;
+    height: 60px;
+    background: #ffff00;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 30px);
+    top: 10px;
+}
+
+.neck .fastener .line1 {
+    position: absolute;
+    width: 53px;
+    height: 18px;
+    border-top: 2px solid #000;
+    top: 16px;
+    left: 2px;
+}
+
+.neck .fastener .line2 {
+    position: absolute;
+    width: 55px;
+    height: 18px;
+    border-top: 2px solid #000;
+    top: 35%;
+}
+
+.neck .fastener .macula {
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    background: #000;
+    top: 29px;
+    left: calc(50% - 7px);
+}
+
+.neck .fastener .line3 {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-left: 2px solid #000;
+    left: 50%;
+    bottom: 0;
+}
+
+/*# sourceMappingURL=style.53e67d4e.css.map */
